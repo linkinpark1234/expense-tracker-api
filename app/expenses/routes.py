@@ -10,7 +10,7 @@ from app.extensions import db
 
 from sqlalchemy import extract
 from datetime import datetime
-
+expense_bp = Blueprint('expenses', __name__)
 @expense_bp.route('/expenses', methods=['POST'])
 @jwt_required()
 def add_expense():
